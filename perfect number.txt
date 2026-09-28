@@ -1,0 +1,17 @@
+DECLARE
+    n NUMBER := 28;
+    total NUMBER := 0;
+BEGIN
+    FOR i IN 1..n-1 LOOP
+        IF MOD(n, i) = 0 THEN
+            total := total + i;
+        END IF;
+    END LOOP;
+
+    IF total = n THEN
+        DBMS_OUTPUT.PUT_LINE(n || ' is a Perfect Number');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE(n || ' is Not a Perfect Number');
+    END IF;
+END;
+/
